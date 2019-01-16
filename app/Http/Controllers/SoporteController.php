@@ -15,7 +15,7 @@ class SoporteController extends Controller
      */
     public function index()
     {
-        $soportes = Soporte::paginate(3);
+        $soportes = soporte::paginate(3);
         return view('soporte.index',compact('soportes'));
     }
 
