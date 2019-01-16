@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\soporte;
 use Illuminate\Http\Request;
+use Session;
 
 class SoporteController extends Controller
 {
@@ -14,7 +15,8 @@ class SoporteController extends Controller
      */
     public function index()
     {
-        //
+        $soportes = Soporte::paginate(3);
+        return view('soporte.index',compact('soportes'));
     }
 
     /**
