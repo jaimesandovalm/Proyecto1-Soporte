@@ -15,6 +15,13 @@ class CreateSoportesTable extends Migration
     {
         Schema::create('soportes', function (Blueprint $table) {
             $table->increments('id');
+            $table->String('Nombre_Usuario');
+            $table->String('Anexo');
+            $table->String('Motivo_Soporte');
+            $table->date('Fecha_Solicitud');
+            $table->String('Usuario_soporte');
+            $table->String('Estado');
+            $table->String('Informacion_Adicional');
             $table->timestamps();
         });
     }

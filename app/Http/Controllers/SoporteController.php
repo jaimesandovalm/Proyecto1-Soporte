@@ -15,8 +15,8 @@ class SoporteController extends Controller
      */
     public function index()
     {
-        $soportes = soporte::paginate(3);
-        return view('soporte.index',compact('soportes'));
+        $soport = Soporte::paginate(3);
+        return view('soporte.index',compact('soport'));
     }
 
     /**
@@ -26,7 +26,7 @@ class SoporteController extends Controller
      */
     public function create()
     {
-        //
+        return view('soporte.create');
     }
 
     /**
