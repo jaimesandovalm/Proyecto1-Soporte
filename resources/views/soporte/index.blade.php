@@ -1,11 +1,10 @@
-@extends('soporte.layout')
+@extends('soporte.layout2')
 
 @section('content')
     <div class="container">
     <table class="table">
   <thead class="thead-dark">
     <tr>
-      
       <th scope="col">ID</th>
       <th scope="col">Nombre_Usuario</th>
       <th scope="col">Anexo</th>
@@ -17,6 +16,7 @@
     </tr>
       
   </thead>
+ 
   <tbody>
   @foreach($soport as $soportes)
     <tr>
