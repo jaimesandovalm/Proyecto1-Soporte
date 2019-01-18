@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="container">
+      <button class="btn btn-info" ><a href="{{ route('soporte.create') }}">+ Agregar Ticket</a></button><br>    
+    </div>
+    <div class="container">
     <table class="table">
   <thead class="thead-dark">
     <tr>
