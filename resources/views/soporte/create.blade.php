@@ -2,7 +2,5 @@
 
     @section('content')
 
-        <div class="container">
-            <input type="text">
-        </div>
+        <h1> Crear Ticket</h1>
     @endsection
