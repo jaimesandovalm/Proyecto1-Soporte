@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Registro</title>
+    <title>Soporte Tecnico</title>
     <!--{{asset('css/bootstrap.min.css')}}
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
@@ -22,8 +23,8 @@
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
 
     <!--Layout1-->
-    
-    
+
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,8 +33,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
-    
+
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -46,7 +48,7 @@
                 <a class="navbar-brand" href="{{ route('soporte.index') }}">MV Servicios</a>
             </div>
             <!-- /.navbar-header -->
-    
+
             <ul class="nav navbar-top-links navbar-right">
                 <!-- /.dropdown -->
                 <li class="dropdown">
@@ -67,7 +69,7 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
-    
+
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -75,10 +77,10 @@
                             <div class="input-group custom-search-form">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
                             </div>
                             <!-- /input-group -->
                         </li>
@@ -178,7 +180,7 @@
     </div>
 
     @yield('content')
-    
+
 
 
     <script src="{{ asset('jquery/jquery.min.js') }}"></script>
@@ -198,8 +200,9 @@
     <script src="{{ asset('js/sb-admin-2.js') }}"></script>
 
     <!--layout1-->
-    
-   
+
+
 
 </body>
+
 </html>

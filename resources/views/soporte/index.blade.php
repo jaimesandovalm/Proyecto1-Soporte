@@ -2,9 +2,12 @@
 
 @section('content')
 
+@if(Session::has('message'))
+<div class="alert alert-info">{{Session::get('message')}}</div>
+@endif
 <div class="container">
     <a class="btn btn-info mb-3" href="{{ route('soporte.create') }}">+ Agregar Ticket</a>
-    <hr>
+    <br><br>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -19,21 +22,21 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($soport as $soportes)
+            @foreach($soport as $soport)
             <tr>
-                <th scope="row">{{ $soportes->id }}</th>
-                <td>{{ $soportes->Nombre_Usuario }}</td>
-                <td>{{ $soportes->Anexo }}</td>
-                <td>{{ $soportes->Motivo_Soporte }}</td>
-                <td>{{ $soportes->Fecha_Solicitud }}</td>
-                <td>{{ $soportes->Usuario_soporte }}</td>
-                <td>{{ $soportes->Estado }}</td>
-                <td>{{ $soportes->Informacion_Adicional }}</td>
+                <th scope="row">{{ $soport->id }}</th>
+                <td>{{ $soport->Nombre_Usuario }}</td>
+                <td>{{ $soport->Anexo }}</td>
+                <td>{{ $soport->Motivo_Soporte }}</td>
+                <td>{{ $soport->Fecha_Solicitud }}</td>
+                <td>{{ $soport->Usuario_soporte }}</td>
+                <td>{{ $soport->Estado }}</td>
+                <td>{{ $soport->Informacion_Adicional }}</td>
             </tr>
             @endforeach
         </tbody>
     </table>
 
-    {{ $soport->links() }}
+    
 </div>
 @endsection

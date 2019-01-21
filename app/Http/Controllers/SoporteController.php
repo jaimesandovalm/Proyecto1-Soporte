@@ -15,7 +15,7 @@ class SoporteController extends Controller
      */
     public function index()
     {
-        $soport = Soporte::paginate(3);
+        $soport = soporte::paginate(3);
         return view('soporte.index',compact('soport'));
     }
 
@@ -37,7 +37,20 @@ class SoporteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'Nombre_Usuario' => 'required',
+            'Anexo' => 'required',
+            'Motivo_Soporte'=> 'required',
+            'Fecha_Solicitud'=>'required',
+            'Usuario_soporte'=>'required',
+            'Estado'=>'required',
+            'Informacion_Adicional'=>'required',
+        ]);
+
+        soporte::create($request->all());
+        /*envia un mensaje al usuario*/    
+        Session::flash('message','Ticket creado Correctamente');
+        return redirect()->route('soporte.index');/*nos redirecciona*/
     }
 
     /**
