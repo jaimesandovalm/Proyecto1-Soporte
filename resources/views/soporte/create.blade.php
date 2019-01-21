@@ -8,7 +8,7 @@
 <div class="alert alert-info">{{Session::get('message')}}</div>
 @endif
 
-<div class="container">
+<div class="page-wrapper">
     <form action="{{ route('soporte.store') }}" method="POST">
         @csrf
 
